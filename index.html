@@ -18,30 +18,91 @@
                         <img src="img/isotipo2.svg" alt="isotipo">
                     </a>
                     
-                    <nav class="contenedor-nav dblock">
+                    <div class="contenedor-nav dblock">
 
                         <a href="#" class="menu"><img src="iconos/hamburguesa.svg" alt="icono menu"></a>
+                        
+                        <nav class="navegacion">
+                           
+                            <button onClick="scroll(0, 500)" id="prod">Productos</button>
+                            
+                            <button id="nos" onClick="scrollWin(0, 500);">Nosotros</button>
+                            
+                            <button id="pedi" onClick="scrollWin()">Pedidos</button>
+                            
+                            <button id="redes" onClick="scrollWin()">Redes Sociales</button>
 
-                    </nav>
+                        </nav>
+
+                    </div>
+                    
                 </div>
             
         </header>
         <div class="slogan ">
             <img src="img/burguer1.jpg" alt="">
         </div>
+        <main class="contenedor contenido-centrado">
+            <h2>Algunos de nuestros Productos</h2>
+            <div class="contenedor-anuncios ">
+                <div class="anuncio">
+                    <img src="img/burguer2.jpg" alt="Triple Que">
+                    <div class="contenido-anuncio contenido-centrado">
+                        <h3>Triple Que!</h3>
+                        <ul class="lista-productos">
+                            <li>Pan de Papa.</li>
+                            <li>Tres Carnes de 100g c/u.</li>
+                            <li>Triple Chedar.</li>
+                            <li>Ketchup,Mostaza y Cebolla.</li>
+                        </ul>
+                    </div>
+                </div><!--Anuncio-->
+                   
+                <div class="anuncio">
+                    <img src="img/burguer3.jpg" alt="Clasica">
+                    <div class="contenido-anuncio">
+                        <h3>Clasica</h3>
+                        <ul class="lista-productos">
+                            <li>Pan de Papa.</li>
+                            <li>Dos Carnes de 100g c/u.</li>
+                            <li>Doble Chedar.</li>
+                            <li>Cebolla, Tomate y Salsa Rumas&reg;.</li>
+                        </ul>
+                    </div>
+                </div><!--Anuncio-->
+                
+                <div class="anuncio">
+                    <img src="img/burguer4.jpg" alt="Fried Onion">
+                    <div class="contenido-anuncio">
+                        <h3>Fried Onion</h3>
+                        <ul class="lista-productos">
+                            <li>Pan de Papa.</li>
+                            <li>Doble Carnes de 100g c/u.</li>
+                            <li>Doble Chedar.</li>
+                            <li>Cebolla.</li>
+                        </ul>
+                    </div>
+                </div><!--Anuncio-->
+            
+             
+               </div>
+        </main>
         
-        <section class="contenedor contenedor-contacto">
-            <h2 class="centrar-texto">CONTACTANOS</h2>
+        
+        
+        <section class="contenedor contenedor-contacto" id="contactar">
+            <h2 class="centrar-texto">¿Que estas Esperando?</h2>
             <div class="contacto">
                     <video autoplay muted="muted" loop>
-                        <source src="videos/telefono.mp4" type="video/mp4">
+                        <source src="videos/telefono.mp4" type="video/mp4" class="Video-telefono">
                         <p>tu navegador no soporta este formato.</p>
                         
                     </video>
                 
-                <div class="mensaje">
-                    <p class="mensaje-contactanos">Podes contactarte con nosotros por Whatsapp para realizar tu pedido haciendo click en el siguiente icono y te respondemos al instante.</p>
-                    <a class="icono-whatsapp" href="https://wa.me/543517599334/?text=Hola%20Quisiera%20realizar%20mi%20pedido."><img src="iconos/whatsapp.svg" alt=""></a>
+                <div class="mensaje contenedor">
+                    <h3>Hace tu Pedido ahora Mismo !!</h3>
+                    <p>Toca el icono de Whatsapp para contactarte con nosotros.</p>
+                    <a href="https://wa.me/543517599334/?text=Hola%20Quisiera%20realizar%20mi%20pedido."><img src="iconos/whatsapp.svg" alt="Icono Whatsapp" class="icono-whatsapp" ></a>
                 </div>
             </div><!--Contacto-->
 

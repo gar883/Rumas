@@ -76,44 +76,41 @@ video{
     justify-content: center;
     align-items: center;
 }
-@media (min-width:1000px){
 
-.barra{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 2rem;
-    flex-direction: row;
+.menu-hamburguesa{
+    height: 9rem;
+    width: 9rem;
 }
-        }
-.navegacion{
-    display: none;
-    align-items: center;
-    flex-direction: column;
-}
-.navegacion button{
-    background: #e60a0a;
+
+.contenedor-navegacion{
+    max-height: 0;
+    transition: .5s;
     display: block;
-    border: none;
-    margin-bottom: 1rem;
-    font-size:5rem;
-    
+}
+#nav:target {
+    max-height: 100%;
 }
 .navegacion button:last-of-type{
     margin-bottom: 2rem;
 }
-   
+  .navegacion{
+    background: #e60a0a;
+    display: block;
+    border: none;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    font-size:5rem;
+    
+    
+} 
     
 .logotipo{
     
     border-radius: 50%;
 
 }
-.menu img{
-    height: 8rem;
-    width: 8rem;
-    
-}
+
 /*PRODUCTOS*/
 .algunos-productos{
     font-family: 'Lobster', cursive;

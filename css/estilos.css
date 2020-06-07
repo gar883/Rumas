@@ -72,7 +72,8 @@ video{
 }
 .barra{
     display: flex;
-    justify-content: space-between ;
+    Flex-direction:column ;
+    justify-content: center ;
     align-items: center;
 }
 

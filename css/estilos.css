@@ -134,8 +134,8 @@ video{
     flex-basis: calc(50% - 2rem);
     border: 2px solid #000000;
     margin-bottom: 2rem; 
-    transform:scale(0.5);
-    transition:all .5s ease;
+    
+
 }
 @media (min-width:1000px){
     

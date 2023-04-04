@@ -5,21 +5,15 @@ html{
 *, *:before, *:after {
   box-sizing: inherit;
 }
-@font-face{
-    font-family: 'Lobster';
-    src: url(../fuentes/Lobster-Regular.ttf);
-}
-@font-face{
-    font-family: 'Poppins';
-    src:url(../fuentes/Lobster,Poppins/Poppins/Poppins-Regular.ttf);
-}
+
 body{
-  background: #d9d9d9;
+  background: #fdfbec;
     font-size: 1.8em;
     line-height: 2;
     margin: 0;
     border:0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Patua One', cursive;
+    padding: 9rem 2rem 0;
     }
         
 h1{
@@ -35,11 +29,7 @@ h4{
         font-size: 2rem;
     }
 
-.menu{
-    text-decoration: none;
-    text-transform: uppercase;
-    font:impact;
-}
+
 img{
     max-width: 100%;
 }
@@ -58,58 +48,228 @@ video{
     align-items: center;
 }
 .contenedor-nav{
-    text-align: center;
+    text-align:end;
+    padding: 5rem;
+
 }
 .centrar-texto{
     text-align: center;
 }
-.dblock{
-    display: inline-block;
-}
+
 /*Header*/
 .site-header{
     background: #e60a0a;
+    height: 8rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+
 }
 .barra{
     display: flex;
-    Flex-direction:column ;
-    justify-content: center ;
+    flex-direction:row;
+    justify-content: space-between ;
     align-items: center;
+    height: 8rem;
+    
+}
+
+
+
+.nav-menu-link{
+    color: white;
+    text-decoration: none;
+    padding: .8rem 1.2rem;
+    border-radius: .3rem;
+    
+}
+.nav-menu-link:hover{
+    transition: .5s;
+    background-color:  rgb(133, 0, 0);
+}
+
+.logo{
+    width: 10rem;
+    height: 80rem;
+    padding: 0rem 0.2rem 0 1rem;
+    
+}
+.nav-menu{
+    display: flex;
+    margin-right: 4rem;
+    list-style: none;
+}
+
+.nav-menu-item{
+    font-size: 1.8rem;
+    margin: 0 1rem;
+    line-height: 8rem;
+    text-transform: uppercase;
+    width: max-content;
+
+}
+.toggle{
+    color: #ffff;
+    background: none;
+    border: none;
+    padding-right: 2rem;
+    display: none;
+}
+.toggle:hover{
+    cursor: pointer;
 }
 
 .menu-hamburguesa{
-    height: 9rem;
-    width: 9rem;
+    height: 6rem;
+    }
+
+
+@media (max-width: 1000px ){
+body{
+        
+   padding-top: 7rem;
 }
 
-.contenedor-navegacion{
-    max-height: 0;
-    transition: .5s;
-    display: block;
+/*Header*/
+.site-header{
+    
+    height: 6rem;
+    
+
 }
-#nav:target {
-    max-height: 100%;
+.barra{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between ;
+    align-items: center;
+    height: 100%;
+    
 }
-.navegacion button:last-of-type{
-    margin-bottom: 2rem;
-}
-  .navegacion{
-    background: #e60a0a;
-    display: block;
-    border: none;
+
+
+.nav-menu-link{
     color: white;
     text-decoration: none;
-    margin-bottom: 1rem;
-    font-size:5rem;
+    padding: .8rem 1.2rem;
+    border-radius: .3rem;
+    
+}
+.nav-menu-link:hover,
+.nav-menu-link_active {
+    transition: .5s;
+    background:#e60a0a;
+}
+
+.logo{
+    width: 10rem;
+    height: 100%;
+    padding: .2rem;
+    margin: 0 2rem;
     
     
-} 
+}
+.nav-menu{
+   flex-direction: column;
+   margin:0 2rem 0 0;
+   background-color:  rgb(133, 0, 0);
+   position: fixed;
+   left: 100%;
+   transition: .3s;
+   top: 6rem;
+   width: 100%;
+   align-items: center;
+   padding:2rem 0;
+}
+.nav-menu_visible{
+    left: 0;
+}
+
+.nav-menu-item{
     
-.logotipo{
+    line-height: 7rem;
     
-    border-radius: 50%;
 
 }
+.toggle{
+    color: #ffff;
+    background: none;
+    border: none;
+    display: block;
+    
+}
+
+.toggle:hover{
+    cursor: pointer;
+}
+
+.menu-hamburguesa{
+    height: 6rem;
+    padding: 1rem;
+    
+    }
+}
+
+/*SLIDE*/
+
+.section-slide{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.slider{
+    width: 800px;
+    height: 500px;
+    border-radius: 1rem;
+    overflow: hidden;
+
+}
+.slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 20%;
+    transition: 2s;
+
+}
+.slide img{
+    width: 800px;
+    height: 500px;
+
+}
+/*SLIDE Navegación manual*/
+.navigation-manual{
+    position: absolute;
+    width: 80rem;
+    margin-top: -4rem;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid #DC0000;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    
+}
+.manual-btn:not(:last-child){
+    margin-right: 4rem;
+}
+
+
+
+
+
 
 /*PRODUCTOS*/
 .algunos-productos{
@@ -137,7 +297,7 @@ video{
     
 
 }
-@media (min-width:1000px){
+/**@media (min-width:1000px){
     
 
 .contenedor-anuncios{

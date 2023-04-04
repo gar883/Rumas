@@ -1,64 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Rumas Burguer</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="fuentes/Lobster,Poppins/Lobster/Lobster-Regular.ttf">
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Rumas Burguer</title>
+        <link rel="stylesheet" href="css/estilos.css">
+        <link rel="icon" href="multimedia/img/isotipo2.svg">
+        <link rel="stylesheet" href="fuentes/Lobster,Poppins/Lobster/Lobster-Regular.ttf">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Damion&family=Patua+One&display=swap"  rel="stylesheet">
+
+        <script defer src="JS/index.js"></script>
+        
     
     </head>
 
     <body>
+        <!-- Barra de navegación-->
         <header class="site-header">
             
-                <div class="barra contenedor">
+            <nav class="barra">
+                
                     <a href="#" class="logo">
-                        <img src="img/isotipo2.svg" alt="isotipo">
+                        <img class="logo" src="multimedia/img/isotipo2.svg" alt="isotipo">
                     </a>
-                    
-                    <div class="contenedor-nav dblock">
 
-                        <a href="#nav" class="enlace-navegacion" ><img src="iconos/hamburguesa.svg" alt="icono menu" class="menu-hamburguesa"></a>
+                    <button class="toggle"><img src="iconos/hamburguesa.svg" class="menu-hamburguesa"></button>
+
+                    <ul class="nav-menu" id="nav-menu">
+                        <li class="nav-menu-item">
+                            <a href="#" class="nav-menu-link">Sobre Nosotros</a></li>
+                        <li class="nav-menu-item">
+                            <a href="#" class="nav-menu-link">Productos</a></li>
+                        <li class="nav-menu-item">
+                            <a href="#" class="nav-menu-link">Pedidos</a></li>
                         
-                        <nav id="nav" class="contenedor-navegacion">
-                           
-                            <a href="#" class="navegacion">Productos</a>
-
-                            <a href="#" class="navegacion">Nosotros</a>
-
-                            <a href="#" class="navegacion">Pedidos</a>
-
-                            <a href="#" class="navegacion">Redes Sociales</a>
-
-                        </nav>
-
-                    </div>
+                    </ul>
                     
-                </div>
+
+                    
+            </nav>
             
         </header>
-        <div class="slogan ">
-            <img src="img/burguer1.jpg" alt="">
-        </div>
+        
         <main class="contenedor contenido-centrado">
-            <h2 class="algunos-productos">Algunos de nuestros Productos</h2>
-            <div class="contenedor-anuncios ">
-                <div class="anuncio">
-                    <img src="img/burguer2.jpg" alt="Triple Que">
-                    <div class="contenido-anuncio contenido-centrado">
-                        <h3 class="hedings">Triple Qué</h3>
-                        <ul class="lista-productos">
-                            <li>Pan de Papa.</li>
-                            <li>Tres Carnes de 70g c/u.</li>
-                            <li>Triple Chedar.</li>
-                            <li>Ketchup,Mostaza y Cebolla.</li>
-                        </ul>
+            <!--Slider con ofertas-->
+        <section class="section-slide">
+            <div class="slider">
+                <div class="slides">
+                    <!--Radio button inicio-->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <!--Radio button fin-->
+
+                    <!--Slide inicio-->
+                    <div class="slide first">
+                        <img src="multimedia/img/miercoles2x1.png" alt="Slider">
                     </div>
-                </div><!--Anuncio-->
-                   
+                    <div class="slide">
+                        <img src="multimedia/img/rumas-mano.jpg" alt="Slider">
+                    </div>
+                    <div class="slide">
+                        <img src="multimedia/img/mejores-burguer.jpg" alt="Slider">
+                    </div>
+                    <div class="slide">
+                        <img src="multimedia/img/miercoles2x1.png" alt="Slider">
+                    </div>
+                    <!--Slide fin-->
+
+                    <!--navegación automática inicio-->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+                    <!--navegación automática fin-->
+                </div>
+                <!--navegación manual inicio-->
+                 <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                 </div>
+                <!--navegación manual fin-->
+            </div>
+        </section>
+
+            <!-- Listado de productos -->
+                <h2 class="algunos-productos">Algunos de nuestros Productos</h2>
+            <div class="contenedor-anuncios ">
+                                   
                 <div class="anuncio">
-                    <img src="img/burguer3.jpg" alt="Clasica">
+                    <img src="multimedia/img/burguer3.jpg" alt="Clasica">
                     <div class="contenido-anuncio">
                         <h3 class="hedings">Clásica</h3>
                         <ul class="lista-productos">
@@ -68,10 +105,26 @@
                             <li>Cebolla, Tomate y Salsa Rumas&reg;.</li>
                         </ul>
                     </div>
-                </div><!--Anuncio-->
+                </div>
+                <!--Producto-->
+
+                <div class="anuncio">
+                    <img src="multimedia/img/burguer2.jpg" alt="Triple Que">
+                    <div class="contenido-anuncio contenido-centrado">
+                        <h3 class="hedings">Triple Qué</h3>
+                        <ul class="lista-productos">
+                            <li>Pan de Papa.</li>
+                            <li>Tres Carnes de 70g c/u.</li>
+                            <li>Triple Chedar.</li>
+                            <li>Ketchup,Mostaza y Cebolla.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!--Producto-->
                 
                 <div class="anuncio">
-                    <img src="img/burguer4.jpg" alt="Fried Onion">
+                    <img src="multimedia/img/burguer4.jpg" alt="Fried Onion">
                     <div class="contenido-anuncio">
                         <h3 class="hedings">Fried Onion</h3>
                         <ul class="lista-productos">
@@ -81,10 +134,11 @@
                             <li>Cebolla.</li>
                         </ul>
                     </div>
-                </div><!--Anuncio-->
+                </div>
+                <!--Producto-->
             
                  <div class="anuncio">
-                    <img src="img/burguer5.jpg" alt="cheese Burguer">
+                    <img src="multimedia/img/burguer5.jpg" alt="cheese Burguer">
                     <div class="contenido-anuncio">
                         <h3 class="hedings">Cheese Burguer</h3>
                         <ul class="lista-productos">
@@ -95,18 +149,22 @@
                             
                         </ul>
                     </div>
-                </div><!--Anuncio-->
+                </div>
+                <!--Producto-->
              
-               </div>
+            </div>
         </main>
         
+        <div class="slogan ">
+            <img src="multimedia/img/burguer1.jpg" alt="">
+        </div>
         
-        
+        <!-- Sección conexion whatapp-->
         <section class="contenedor contenedor-contacto" id="contactar">
             <h2 class="centrar-texto">¿Que estas Esperando?</h2>
             <div class="contacto">
                     <video autoplay muted="muted" loop>
-                        <source src="videos/telefono.mp4" type="video/mp4" class="Video-telefono">
+                        <source src="multimedia/videos/telefono.mp4" type="video/mp4" class="Video-telefono">
                         <p>tu navegador no soporta este formato.</p>
                         
                     </video>
@@ -114,14 +172,16 @@
                 <div class="mensaje contenedor">
                     <h3>Hace tu Pedido ahora Mismo !!</h3>
                     <p>Toca el icono de Whatsapp para contactarte con nosotros.</p>
-                    <a href="https://wa.me/543517599334/?text=Hola%20Quisiera%20realizar%20mi%20pedido."><img src="iconos/whatsapp.svg" alt="Icono Whatsapp" class="icono-whatsapp" ></a>
+                    <a href="https://wa.me/543513612751/?text=Hola%20Quisiera%20realizar%20mi%20pedido:." target="_blank"><img src="iconos/whatsapp.svg" alt="Icono Whatsapp" class="icono-whatsapp" ></a>
                 </div>
-            </div><!--Contacto-->
+            </div>
 
         </section>
         <footer>
             <p>RumasBurguer.Todos los derechos reservados 2020&copy;</p>
         </footer>
+
+        
     </body>
 
     </html>

@@ -242,17 +242,20 @@ body{
 
 }
 .slide img{
-    width: 800px;
-    height: 500px;
+    width: 80rem;
+    height: 50rem;
 
 }
 /*SLIDE Navegación manual*/
 .navigation-manual{
     position: absolute;
     width: 80rem;
-    margin-top: -4rem;
+    margin: 0 auto 0 auto;
     display: flex;
     justify-content: center;
+    overflow: hidden;
+    bottom: 18rem;
+
     
     
 }
@@ -283,7 +286,7 @@ body{
     margin-left: -60%;
 }
 
-@media (min-width:750px){
+/*@media (min-width:750px){
 .navegacion-manual{
         margin-right: 50px;
         padding-left: 25%;

@@ -253,6 +253,8 @@ body{
     margin-top: -4rem;
     display: flex;
     justify-content: center;
+    
+    
 }
 .manual-btn{
     border: 2px solid #DC0000;
@@ -265,9 +267,28 @@ body{
 .manual-btn:not(:last-child){
     margin-right: 4rem;
 }
+.manual-btn:hover{
+    background: #DC0000;
+}
+#radio:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
 
-
-
+@media (min-width:750px){
+.navegacion-manual{
+        margin-right: 50px;
+        padding-left: 25%;
+    }
+}
 
 
 
@@ -297,6 +318,7 @@ body{
     
 
 }
+
 /**@media (min-width:1000px){
     
 

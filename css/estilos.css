@@ -215,7 +215,7 @@ body{
 .section-slide{
     margin: 0;
     padding: 0;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -250,7 +250,8 @@ body{
 .navigation-manual{
     position: absolute;
     width: 80rem;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 5rem auto;
+    padding-bottom: 5rem;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -277,7 +278,7 @@ body{
     margin-left: 0;
 }
 #radio2:checked ~ .first{
-    margin-left: -20%;
+    margin-left: -20%; 
 }
 #radio3:checked ~ .first{
     margin-left: -40%;
@@ -297,9 +298,10 @@ body{
 
 /*PRODUCTOS*/
 .algunos-productos{
-    font-family: 'Lobster', cursive;
+    
     font-size: 3.8rem;
-    margin: .5rem;
+    margin: 1rem;
+    padding: 1rem;
     letter-spacing: 2px;
     
 }
@@ -321,19 +323,58 @@ body{
     
 
 }
+.contenedor-contador{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #FFDB89;
+}
+.incr{
+    margin: 1rem;
+}
+.contador{
+    margin: 1rem;
+}
+.decr{
+    margin: 1rem;
+}
+.contenedor-contador>button{
+    border-radius: 15%;
+    background-color: #fdfbec;
+    border: none;
+    cursor: pointer;
+    height: 5rem;
+    width: 5rem;
+}
+.contenedor-contador>button:hover{
+ transform: scale(1,1);
+}
 
-/**@media (min-width:1000px){
+
+button>span{
+    color: black;
+    height: 3rem;
+    width: 3rem;
+}
+
+@media (max-width:1000px){
     
 
 .contenedor-anuncios{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    
+    
     
 }
     .anuncio{
-    flex-basis: calc(50% - 2rem);
+    flex-grow: 100%;
     border: 2px solid #000000;
     font-size: 3rem;
+    
     
 }
     }
@@ -368,6 +409,38 @@ body{
     max-width: 10%;
     
 }
+/*PRODUCTOS*/
+input[type="checkbox"]{
+    margin: 0 auto;
+    padding-left: 1rem;
+    flex-basis: -webkit-min-content;
+    flex-basis: -moz-min-content;
+    flex-basis: min-content;
+    height: 5rem;
+    width: 5rem;
+    
+}
+input[type="checkbox"]:hover{
+    cursor: pointer;
+}
+.lista-productos{
+    display: flex;
+    justify-content:flex-start;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.lista-productos li{
+    
+    
+    flex-basis: 70%
+      
+}
+
+
+
+
 
 /*FOOTER*/
 footer{
@@ -377,4 +450,6 @@ footer{
     text-align: center;
     font-size: 2.5rem;
 }
+
+
 

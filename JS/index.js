@@ -14,7 +14,12 @@ navToggle.addEventListener("click", () => {
 })
 
 
-
+const botonesCont = document.querySelectorAll("div.contenedor-contador > button");
+console.log(botonesCont)
+btnPress.addEventListener("click", () =>{
+    botonesCont.setAttribute("backgroud-color", "#FFDB89");
+    console.log(botonesCont)
+})
 
 
 

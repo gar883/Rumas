@@ -346,9 +346,14 @@ body{
     cursor: pointer;
     height: 5rem;
     width: 5rem;
+    box-shadow: 0 .2rem .1rem rgba(0, 0, 0, 0.3);
 }
 .contenedor-contador>button:hover{
  transform: scale(1,1);
+}
+.contenedor-contador>button:active{
+    transform: translateY(.3rem);
+    box-shadow: 0 0rem .1rem rgba(0, 0, 0, 0.3);
 }
 
 

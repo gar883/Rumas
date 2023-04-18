@@ -250,7 +250,7 @@ body{
 .navigation-manual{
     position: absolute;
     width: 80rem;
-    margin: 0 auto 5rem auto;
+    margin: 0 auto 0 auto;
     padding-bottom: 5rem;
     display: flex;
     justify-content: center;
@@ -357,10 +357,30 @@ button>span{
     height: 3rem;
     width: 3rem;
 }
-
-@media (max-width:1000px){
+.contacto{
     
+        position: relative;
+        
+        
 
+}
+.mensaje{
+    position: absolute;
+    top: 0;
+    font-size: 3rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+.icono-whatsapp{
+    height: 20rem;
+    width: 20rem;
+}
+
+@media (max-width:750px){
+ 
 .contenedor-anuncios{
     display: flex;
     flex-direction: column;
@@ -377,7 +397,45 @@ button>span{
     
     
 }
+.navigation-manual{
+    margin: 0 auto 5rem auto;
+}
+.contacto{
+    position: relative;
+    background: rgba(0, 0, 0, 0.3);
+    
+}
+.mensaje{
+    top: 0;
+    padding: 1.5rem;
+    height: 100%;
+    width: 100%;
+    color: #ffff;
+    font-size: 1.8rem;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    
+    
+
+    
+   
+
+}
+.mensaje >h3{
+    font-size: 2rem;
+}
+.mensaje > a{
+    font-size: 2rem;
+    margin-top: -2rem;
+}
+.icono-whatsapp{
+    height: 3rem;
+    width: 3rem;
+    margin-top: -2rem;
+    
     }
+}
 
 .hedings::after{
     content: '';
@@ -389,26 +447,15 @@ button>span{
     
 }
 
+
 /*Contactanos por whatsapp*/
 .video-telefono{
     position: relative;
     
     }
-.mensaje{
-    position: absolute;
-    margin-top: -40rem;
-    text-align: center;
-    color: white;
-    font-size: 3.1rem;
-    background: rgba(0, 0, 0, 0.3);
-    max-height: 100%;
-    max-width: 100%;
-    }
-.icono-whatsapp{
-    max-height: 10%;
-    max-width: 10%;
     
-}
+
+
 /*PRODUCTOS*/
 input[type="checkbox"]{
     margin: 0 auto;

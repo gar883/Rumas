@@ -20,6 +20,17 @@ btnPress.addEventListener("click", () =>{
    
 })
 
+/*CONTADOR*/
+let contador = document.getElementsByClassName("contador");
+
+let restar = document.getElementsByClassName("decr");
 
 
 
+let numero = 0;
+
+let sumar = document.querySelectorAll(".incr");
+
+sumar.addEventListener('click', () => {
+    alert();
+})

@@ -2,7 +2,7 @@ const navToggle = document.querySelector(".toggle");
 const navMenu = document.querySelector(".nav-menu");
 const menuLogo = document.querySelector(".menu-hamburguesa");
 
-
+//Navegación manual 
 navToggle.addEventListener("click", () => {
     navMenu.classList.toggle("nav-menu_visible");
     menuLogo.setAttribute("src", "iconos/x.svg")
@@ -12,8 +12,18 @@ navToggle.addEventListener("click", () => {
         menuLogo.setAttribute("src", "iconos/hamburguesa.svg")
     }
 })
+//Navegación automática 
+var counter = 1;
+setInterval(function(){
+    document.getElementById("radio" + counter).checked = true; 
+    counter ++;
+    if (counter > 4){
+        counter = 1;
+    }
+}, 5000);
 
 
+//Contador
 const botonesCont = document.querySelectorAll("div.contenedor-contador > button");
 console.log(botonesCont)
 btnPress.addEventListener("click", () =>{

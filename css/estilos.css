@@ -134,7 +134,7 @@ body{
 /*Header*/
 .site-header{
     
-    height: 6rem;
+    height: 10rem;
     
 
 }
@@ -146,7 +146,9 @@ body{
     height: 100%;
     
 }
-
+.nav-menu{
+    top: 10rem
+}
 
 .nav-menu-link{
     color: white;
@@ -176,7 +178,7 @@ body{
    position: fixed;
    left: 100%;
    transition: .3s;
-   top: 6rem;
+   top: 10rem;
    width: 100%;
    align-items: center;
    padding:2rem 0;
@@ -208,6 +210,9 @@ body{
     padding: 1rem;
     
     }
+.navigation-auto div , .navigation-manual label{
+    margin-right: 55%;
+}
 }
 
 /*SLIDE*/
@@ -244,19 +249,16 @@ body{
 .slide img{
     width: 80rem;
     height: 50rem;
+    object-fit: contain;
 
 }
 /*SLIDE Navegación manual*/
 .navigation-manual{
     position: absolute;
-    width: 80rem;
-    margin: 0 auto 0 auto;
-    padding-bottom: 5rem;
     display: flex;
+    width: 800px;
     justify-content: center;
-    overflow: hidden;
-    bottom: 18rem;
-
+    margin-top: 460px;
     
     
 }
@@ -264,12 +266,13 @@ body{
     border: 2px solid #DC0000;
     padding: 5px;
     border-radius: 10px;
+    transition:  1s;
     cursor: pointer;
-    transition: 1s;
+   
     
 }
 .manual-btn:not(:last-child){
-    margin-right: 4rem;
+    margin-right: 40px;
 }
 .manual-btn:hover{
     background: #DC0000;
@@ -286,13 +289,38 @@ body{
 #radio4:checked ~ .first{
     margin-left: -60%;
 }
+/*Estilos de slide automatico*/
 
-/*@media (min-width:750px){
-.navegacion-manual{
-        margin-right: 50px;
-        padding-left: 25%;
-    }
+.navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
 }
+.navigation-auto div{
+    border: 2px solid #DC0000;
+    padding: 5px;
+    border-radius: 10px;
+    transition:  1s;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;     
+} 
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background: #DC0000;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background: #DC0000;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background: #DC0000;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background: #DC0000;
+}
+
 
 
 
@@ -402,9 +430,7 @@ button>span{
     
     
 }
-.navigation-manual{
-    margin: 0 auto 5rem auto;
-}
+
 .contacto{
     position: relative;
     background: rgba(0, 0, 0, 0.3);

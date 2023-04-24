@@ -44,3 +44,5 @@ let sumar = document.querySelectorAll(".incr");
 sumar.addEventListener('click', () => {
     alert();
 })
+
+//CONSUMIR API

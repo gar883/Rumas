@@ -92,7 +92,7 @@ function sumar_hamburguesa_Onion(){
         }) }
 
 function sumar_hamburguesa_cheese(){
-            let hamburguesa = "Cheese Burguer";
+            
             let precio = 2000;
             let resta = document.querySelector('#decrC');
             let suma = document.querySelector('#incrC');
@@ -102,6 +102,7 @@ function sumar_hamburguesa_cheese(){
                 contador++;
                 contar.innerHTML = contador;
                 precio_total += precio;
+               
             });
             resta.addEventListener('click', () => {
                 if(contador == 0){}
@@ -111,6 +112,7 @@ function sumar_hamburguesa_cheese(){
                     precio_total -= precio;
                 }
             })
+           
             
         }
  
@@ -123,9 +125,9 @@ sumar_hamburguesa_cheese();
 //CALCULAR PRECIO
 
 function claclular_precio_onion(){
+    
     let precio = 2000;
     let etiqueta = document.querySelector('#precioO');
-    let precio_valor = parseInt(precio.textContent);
     let check = document.querySelector('#baconO');
     let bacon = 200;
 
@@ -133,19 +135,20 @@ function claclular_precio_onion(){
     
         if(check.checked){
         precio += bacon;
-        etiqueta.innerHTML = `$${precio}`;
+        etiqueta.innerHTML = `$${precio} C/U`;
        
         }else{
             precio -= bacon;
-            etiqueta.innerHTML =`$${precio}`;
+            etiqueta.innerHTML =`$${precio} C/U`;
         }
     })
 
 }
+
 function claclular_precio_cheese(){
+    let hamburguesa = "Cheese Burguer";
     let precio = 2000;
-    let etiqueta = document.querySelector('#precioCH');
-    let precio_valor = parseInt(precio.textContent);
+    let etiqueta = document.querySelector('#precioCH');   
     let check = document.querySelector('#baconCH');
     let bacon = 200;
 
@@ -155,12 +158,12 @@ function claclular_precio_cheese(){
     
         if(check.checked){
         precio += bacon;
-        etiqueta.innerHTML = `$${precio}`;
-       
+        etiqueta.innerHTML = `$${precio} C/U`;
+        
         }else{
             
             precio -= bacon;
-            etiqueta.innerHTML =`$${precio}`;
+            etiqueta.innerHTML =`$${precio} C/U`;
             
         
         }

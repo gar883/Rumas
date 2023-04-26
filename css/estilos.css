@@ -416,7 +416,9 @@ button>span{
 }
 
 @media (max-width:750px){
- 
+.navigation-auto , .navigation-manual{
+    width: 1100px;
+}
 .contenedor-anuncios{
     display: flex;
     flex-direction: column;

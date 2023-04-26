@@ -5,7 +5,7 @@
         <title>Rumas Burguer</title>
         <link rel="stylesheet" href="css/estilos.css">
         <link rel="icon" href="multimedia/img/isotipo2.svg">
-        <link rel="stylesheet" href="fuentes/Lobster,Poppins/Lobster/Lobster-Regular.ttf">
+        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Damion&family=Patua+One&display=swap"  rel="stylesheet">
@@ -32,9 +32,9 @@
                         <li class="nav-menu-item">
                             <a href="#" class="nav-menu-link">Sobre Nosotros</a></li>
                         <li class="nav-menu-item">
-                            <a href="#" class="nav-menu-link">Productos</a></li>
+                            <a href="#productos" class="nav-menu-link">Productos</a></li>
                         <li class="nav-menu-item">
-                            <a href="#" class="nav-menu-link">Pedidos</a></li>
+                            <a href="#contactar" class="nav-menu-link">Contacto</a></li>
                         
                     </ul>
                     
@@ -94,12 +94,12 @@
         </section>
 
             <!-- Listado de productos -->
-                <h2 class="algunos-productos">Algunos de nuestros Productos</h2>
+                <h2 class="algunos-productos" id="productos">Algunos de nuestros Productos</h2>
             <div class="contenedor-anuncios ">
                                    
-                <div class="anuncio">
+                <div class="anuncio" >
                     <img src="multimedia/img/burguer3.jpg" alt="Clasica">
-                    <div class="contenido-anuncio">
+                    <div class="contenido-anuncio" id="prod1">
                         <h3 class="hedings">Clásica</h3>
                         <ul class="lista-productos">
                             <li for="pan-papa"> Pan de Papa.</li><input type="checkbox" id="pan-papa" checked >
@@ -110,15 +110,16 @@
                             <li>Salsa Rumas&reg;.</li><input type="checkbox" id="salsa" checked >
                         </ul>
                     </div>
+                    <p class="precio" id="precioC">$2000</p>
                     <div class="contenedor-contador">
                         
                         
                         
-                            <button class="decr" id="decr"><span class="material-symbols-outlined">
+                            <button class="decr" id="restar"><span class="material-symbols-outlined">
                                 remove
                                 </span></button>
-                                <p class="contador" id="contador">0</p>
-                            <button class="incr" id="incr"><span class="material-symbols-outlined">
+                                <p class="contador" id="contar">0</p>
+                            <button class="incr" id="sumar"><span class="material-symbols-outlined">
                                 add
                                 </span></button>
                         
@@ -139,15 +140,14 @@
                             <li>Cebolla.</li><input type="checkbox" id="cebolla" checked >
                         </ul>
                     </div>
+                    <p class="precio" id="precioT">$2000</p>
                     <div class="contenedor-contador">
-                        
-                        
-                        
-                        <button class="decr" id="decr"><span class="material-symbols-outlined">
+                      
+                        <button class="decr" id="decrT"><span class="material-symbols-outlined">
                             remove
                             </span></button>
-                            <p class="contador" id="contador">0</p>
-                            <button class="incr" id="incr"><span class="material-symbols-outlined">
+                            <p class="contador" id="contadorT">0</p>
+                            <button class="incr" id="incrT"><span class="material-symbols-outlined">
                                 add
                             </span></button>
                     
@@ -165,17 +165,18 @@
                             <li>Doble Carne de 100g c/u.</li><input type="checkbox" checked >
                             <li>Doble Chedar.  </li><input type="checkbox" checked > 
                             <li>Salsa Rumas&reg;.</li><input type="checkbox" checked >
-                            <li>Opcional con Bacon.</li> <input type="checkbox"  > 
+                            <li>Opcional con Bacon.</li> <input type="checkbox" id="baconO" autocomplete="off" > 
                             
                         </ul>
                     </div>
+                    <p class="precio" id="precioO">$2000</p>
                         <div class="contenedor-contador">
                         
-                            <button class="decr" id="decr"><span class="material-symbols-outlined">
+                            <button class="decr" id="decrO"><span class="material-symbols-outlined">
                                 remove
                             </span></button>
-                            <p  class="contador" id="contador">0</p>
-                            <button class="incr" id="incr"><span class="material-symbols-outlined">
+                            <p  class="contador" id="contadorO">0</p>
+                            <button class="incr" id="incrO"><span class="material-symbols-outlined">
                                 add
                             </span></button>
                     
@@ -192,16 +193,17 @@
                             <li>Doble Carne de 100g c/u.</li><input type="checkbox" checked >
                             <li>Doble Chedar.</li><input type="checkbox"  checked >
                             <li>Salsa Rumas&reg;.</li><input type="checkbox"  checked >
-                            <li>Opcional Con Bacon</li><input type="checkbox"  > 
+                            <li>Opcional Con Bacon</li><input type="checkbox" id="baconCH" autocomplete="off" > 
                         </ul>
                     </div>
+                    <p class="precio" id="precioCH">$2000</p>
                         <div class="contenedor-contador">
                         
-                            <button class="decr" id="decr"><span class="material-symbols-outlined">
+                            <button class="decr" id="decrC"><span class="material-symbols-outlined">
                                 remove
                             </span></button>
-                            <p  class="contador" id="contador">0</p>
-                            <button class="incr" id="incr"><span class="material-symbols-outlined">
+                            <p  class="contador" id="contadorC">0</p>
+                            <button class="incr" id="incrC"><span class="material-symbols-outlined">
                                 add
                             </span></button>
                     
@@ -217,7 +219,7 @@
         <!-- Sección conexion whatapp-->
         <section class="contenedor-contacto contenido-centrado" id="contactar">
             <h2 class="centrar-texto">¿Que estas Esperando?</h2>
-            <div class="contacto">
+            <div class="contacto" >
                     <video autoplay muted="muted" loop>
                         <source src="multimedia/videos/telefono.mp4" type="video/mp4" class="Video-telefono">
                         <p>tu navegador no soporta este formato.</p>

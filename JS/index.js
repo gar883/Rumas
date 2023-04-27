@@ -77,10 +77,17 @@ function sumar_hamburguesa_Onion(){
         let suma = document.querySelector('#incrO');
         let contar = document.querySelector('#contadorO');
         let contador = 0;
+        let check = document.querySelector('#baconO');
+
         suma.addEventListener('click', () =>{
             contador++;
             contar.innerHTML = contador;
             precio_total += precio;
+            if(check.checked){
+                pedido.push(hamburguesa + " con bacon");
+            }else{
+                pedido.push(hamburguesa);
+            }          
         });
         resta.addEventListener('click', () => {
             if(contador == 0){}
@@ -126,7 +133,7 @@ sumar_hamburguesa_cheese();
 
 function claclular_precio_onion(){
     
-    let precio = 2000;
+    var precio_onion = 2000;
     let etiqueta = document.querySelector('#precioO');
     let check = document.querySelector('#baconO');
     let bacon = 200;
@@ -134,12 +141,12 @@ function claclular_precio_onion(){
     check.addEventListener('change', () => {
     
         if(check.checked){
-        precio += bacon;
-        etiqueta.innerHTML = `$${precio} C/U`;
+        precio_onion += bacon;
+        etiqueta.innerHTML = `$${precio_onion} C/U`;
        
         }else{
-            precio -= bacon;
-            etiqueta.innerHTML =`$${precio} C/U`;
+            precio_onion -= bacon;
+            etiqueta.innerHTML =`$${precio_onion} C/U`;
         }
     })
 

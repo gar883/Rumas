@@ -400,6 +400,7 @@ button>span{
 .contacto{
     
         position: relative;
+        z-index: -1;
         
         
 
@@ -540,3 +541,44 @@ footer{
 
 
 
+/*PEDIDO*/
+
+product-list{
+    align-items: center;
+    border: solid .5px #000000 ;
+    margin: 5rem;
+    padding: 3rem;
+    
+    
+}
+.heading-pedido{
+    margin: 0 auto;
+   
+    
+}
+
+.pedido{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FFDB89;
+    
+    
+}
+.card-body{
+    display: flex;
+    flex-direction: row;
+    
+    
+   
+    margin: 0 auto;
+}
+.card-body strong{
+    padding-right: 5rem;
+    text-align: left;
+}
+.precio-prod{
+    margin-left: 5rem;
+}

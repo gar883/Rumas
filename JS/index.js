@@ -22,17 +22,65 @@ setInterval(function(){
     }
 }, 5000);
 
+
+
+
+class UI {
+    showProduct(pedido){
+      const product_list =  document.getElementById('product-list');      
+      const element = document.createElement('div');
+      element.innerHTML = `
+        <div class="pedido">
+            <div class="card-body">
+            <strong class="nombre-prod">${pedido.name}</strong>
+            <strong class="precio-prod">$${pedido.price}</strong>
+            </div>
+            
+        </div>
+      `;
+
+      product_list.appendChild(element);
+    }
+
+    deleteProduct(){
+
+    }
+}
+
+
+
 //PEDIDO
-var pedido = [];
+class Productos {
+    constructor(name, price){
+        this.name = name;
+        this.price = price;
+    }
+
+
+}
+
+
+
 var precio_total = 0;
-//CHONTADOR
+
+
+//PRODUCT LIST
+
+
+
+
+
+
+
+//CONTADOR
 function sumar_hamburguesa_clasica(){
-let hamburguesa = "Clasica";
+let name = "Clasica";
 let precio = 2000;
 let resta = document.querySelector('#restar');
 let suma = document.querySelector('#sumar');
 let contar = document.querySelector('#contar');
 let contador = 0;
+
 suma.addEventListener('click', () =>{
     contador++;
     contar.innerHTML = contador;
@@ -47,11 +95,13 @@ resta.addEventListener('click', () => {
         precio_total -= precio;
     }
 
-})}
+})
+
+}
 
 function sumar_hamburguesa_triple(){
-    let hamburguesa = "Triple Que";
-    let precio = 2000;
+    let name = "Triple Que";
+    let price = 2000;
     let resta = document.querySelector('#decrT');
     let suma = document.querySelector('#incrT');
     let contar = document.querySelector('#contadorT');
@@ -71,35 +121,43 @@ function sumar_hamburguesa_triple(){
     }) }
 
 function sumar_hamburguesa_Onion(){
-        let hamburguesa = "Fried Onion"
-        let precio = 2000;
+        let name = "Fried Onion"
+        let price = 2000;
         let resta = document.querySelector('#decrO');
         let suma = document.querySelector('#incrO');
         let contar = document.querySelector('#contadorO');
         let contador = 0;
         let check = document.querySelector('#baconO');
+        
 
         suma.addEventListener('click', () =>{
             contador++;
             contar.innerHTML = contador;
-            precio_total += precio;
+            precio_total += price;
+            let ui = new UI();
             if(check.checked){
-                pedido.push(hamburguesa + " con bacon");
+                
+            let pedido =  new Productos("Fried Onion con bacon", 2200); 
+            ui.showProduct(pedido);
             }else{
-                pedido.push(hamburguesa);
-            }          
+               
+            let  pedido =  new Productos(name, price);
+             
+            ui.showProduct(pedido);
+            } 
+                 
         });
         resta.addEventListener('click', () => {
             if(contador == 0){}
             else{
                 contador--;
                 contar.innerHTML = contador;
-                precio_total -= precio;
+                precio_total -= price;
             }
         }) }
 
 function sumar_hamburguesa_cheese(){
-            
+            let hamburguesa = "Cheese Burguer";
             let precio = 2000;
             let resta = document.querySelector('#decrC');
             let suma = document.querySelector('#incrC');
@@ -204,4 +262,6 @@ xhr.open('GET', `${API_URL}/Hamburguesas/`);
 xhr.send();
 
 */
+
+
 

@@ -23,7 +23,13 @@ setInterval(function(){
 }, 5000);
 
 
+//PRECIO TOTAL
+var total = document.querySelector("#total");
 
+
+
+
+//MOSTRAR EL PEDIDO EN PANTALLA
 
 class UI {
     showProduct(pedido){
@@ -32,8 +38,9 @@ class UI {
       element.innerHTML = `
         <div class="pedido">
             <div class="card-body">
-            <strong class="nombre-prod">${pedido.name}</strong>
-            <strong class="precio-prod">$${pedido.price}</strong>
+            <p class="nombre-prod">${pedido.name}</p>
+            <p class="precio-prod">$${pedido.price}</p>
+            </div>
             </div>
             
         </div>
@@ -75,16 +82,21 @@ var precio_total = 0;
 //CONTADOR
 function sumar_hamburguesa_clasica(){
 let name = "Clasica";
-let precio = 2000;
+let price = 2000;
 let resta = document.querySelector('#restar');
 let suma = document.querySelector('#sumar');
 let contar = document.querySelector('#contar');
 let contador = 0;
+let ui = new UI();
 
 suma.addEventListener('click', () =>{
     contador++;
     contar.innerHTML = contador;
-    precio_total += precio;
+    precio_total += price;
+    total.innerHTML = `$${precio_total}`;
+
+    let pedido =  new Productos("Clasica", 2000); 
+        ui.showProduct(pedido);
     
 });
 resta.addEventListener('click', () => {
@@ -106,10 +118,19 @@ function sumar_hamburguesa_triple(){
     let suma = document.querySelector('#incrT');
     let contar = document.querySelector('#contadorT');
     let contador = 0;
+    let ui = new UI();
+    
+
+
+
     suma.addEventListener('click', () =>{
         contador++;
-        contar.innerHTML = contador;
-        precio_total += precio;
+        contar.innerHTML = contador; 
+        precio_total += price;
+        total.innerHTML = `$${precio_total}`;
+
+        let pedido =  new Productos("Triple Que", 2000); 
+        ui.showProduct(pedido);
     });
     resta.addEventListener('click', () => {
         if(contador == 0){}
@@ -128,20 +149,35 @@ function sumar_hamburguesa_Onion(){
         let contar = document.querySelector('#contadorO');
         let contador = 0;
         let check = document.querySelector('#baconO');
+        let etiqueta = document.querySelector('#precioO');
         
+        check.addEventListener('click', () =>{
+           if(check.checked){
+            price += 200;
+            etiqueta.innerHTML = `$${price} C/U`;
+           }
+           else {
+            price -= 200;
+            etiqueta.innerHTML = `$${price} C/U`;
+           }
+        });
 
         suma.addEventListener('click', () =>{
             contador++;
             contar.innerHTML = contador;
             precio_total += price;
+            total.innerHTML = `$${precio_total}`;
             let ui = new UI();
             if(check.checked){
-                
-            let pedido =  new Productos("Fried Onion con bacon", 2200); 
+          
+            let pedido =  new Productos("Fried Onion c/bacon", 2200); 
             ui.showProduct(pedido);
+            
+            
+
             }else{
                
-            let  pedido =  new Productos(name, price);
+            let  pedido =  new Productos(name, 2000);
              
             ui.showProduct(pedido);
             } 
@@ -157,16 +193,54 @@ function sumar_hamburguesa_Onion(){
         }) }
 
 function sumar_hamburguesa_cheese(){
-            let hamburguesa = "Cheese Burguer";
-            let precio = 2000;
+            let name = "Cheese Burguer";
+            let price = 2000;
             let resta = document.querySelector('#decrC');
             let suma = document.querySelector('#incrC');
             let contar = document.querySelector('#contadorC');
             let contador= 0;
+            let etiqueta = document.querySelector('#precioCH');  
+            let check = document.querySelector('#baconCH');
+            let ui = new UI();
+            
+
+            check.addEventListener('click', () =>{
+                if(check.checked){
+                 price += 200;
+                 etiqueta.innerHTML = `$${price} C/U`
+                 
+                }
+                else {
+                 price -= 200;
+                
+             
+            
+                }
+             });
+
+
             suma.addEventListener('click', () =>{
+                
                 contador++;
                 contar.innerHTML = contador;
-                precio_total += precio;
+                precio_total += price;
+                total.innerHTML = `$${precio_total}`;
+
+
+                let ui = new UI();
+            if(check.checked){
+          
+            let pedido =  new Productos("Cheese burguer c/bacon", 2200); 
+            ui.showProduct(pedido);
+            
+            
+
+            }else{
+               
+            let  pedido =  new Productos(name, 2000);
+             
+            ui.showProduct(pedido);
+            } 
                
             });
             resta.addEventListener('click', () => {
@@ -174,9 +248,9 @@ function sumar_hamburguesa_cheese(){
                 else{
                     contador--;
                     contar.innerHTML = contador;
-                    precio_total -= precio;
+                    precio_total -= price;
                 }
-            })
+            });
            
             
         }
@@ -227,7 +301,7 @@ function claclular_precio_cheese(){
         
         }else{
             
-            precio -= bacon;
+            precio-= bacon;
             etiqueta.innerHTML =`$${precio} C/U`;
             
         

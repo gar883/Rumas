@@ -543,14 +543,7 @@ footer{
 
 /*PEDIDO*/
 
-product-list{
-    align-items: center;
-    border: solid .5px #000000 ;
-    margin: 5rem;
-    padding: 3rem;
-    
-    
-}
+
 .heading-pedido{
     margin: 0 auto;
    
@@ -570,15 +563,39 @@ product-list{
 .card-body{
     display: flex;
     flex-direction: row;
-    
-    
-   
-    margin: 0 auto;
+    align-items: center;
+    width: 70vw;;
 }
-.card-body strong{
+.card-body p{
     padding-right: 5rem;
-    text-align: left;
+    text-align: end;
 }
 .precio-prod{
-    margin-left: 5rem;
+    display: flex;
+    margin-left: 0 auto;
+    text-align: end;
+    justify-content:right;
+    width: 50vw;
+    flex-grow:1;
+
+
+}
+
+.precio-prod, .nombre-prod{
+    
+    
+}
+
+
+/*TOTAL CUENTA*/
+.total-cuenta{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 2rem;
+    background-color: #DC0000;
+    color: white;
+    margin: 0 auto;
+    padding: 1rem;
+    align-items: center;
 }

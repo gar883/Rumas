@@ -400,11 +400,12 @@ button>span{
 .contacto{
     
         position: relative;
-        z-index: -1;
+        
         
         
 
 }
+
 .mensaje{
     position: absolute;
     top: 0;
@@ -581,9 +582,19 @@ footer{
 
 }
 
-.precio-prod, .nombre-prod{
+.btn-eliminar{
+    background: #e60a0a;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 15%;
     
     
+}
+.btn-eliminar:hover{
+    cursor: pointer;
 }
 
 
